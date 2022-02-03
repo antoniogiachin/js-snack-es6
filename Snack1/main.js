@@ -3,39 +3,30 @@
 const bici = [
 
     {
-        'nome': 'dragon',
+        nome:'era',
 
-        'peso' : 20,
+        peso: 25,
     },
 
     {
-        'nome': 'fire',
+        nome:'ea',
 
-        'peso' : 10,
+        peso: 15,
     },
 
     {
-        'nome': 'hawk',
+        nome:'esa',
 
-        'peso' : 25,
+        peso: 20,
     }
-
 
 ];
 
-// Ciclo array per stampare pesi
-let pesi = [];
-for (let i= 0; i < bici.length; i++){
-   
-    
 
-    console.log(bici[i].peso);
 
-    pesi.push(bici[i].peso);
-    
-}
 
-console.log(pesi);
 
-const pesoMax = Math.max(...pesi);
-console.log(pesoMax)
+
+
+
+
