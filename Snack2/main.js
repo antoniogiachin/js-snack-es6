@@ -31,18 +31,15 @@ const squadre =[
 
 function randomNumber(min, max){
 
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    // Altrimenti non arriva a max
+
 }
+
 
 
 function teamFoul(myTeamArray){
 
-    
-    function randomNumber(min, max){
-        
-        return Math.floor(Math.random() * (max - min) + min);
-    }
-    
     const recap =[];
     
     for(let i =0; i < myTeamArray.length; i++){
@@ -51,18 +48,20 @@ function teamFoul(myTeamArray){
     
         myTeamArray[i].falliSubiti = randomNumber(1, 50);
     
-        const {nome} = myTeamArray[i];
-        const{falliSubiti} = myTeamArray[i]
+        const {nome, falliSubiti} = myTeamArray[i];
+
         console.log(nome, falliSubiti);
     
-        recap.push(`La squadra ${nome}, ha subito ${falliSubiti} falli.`);
+        recap.push({nome, falliSubiti});
     
     }
+
     return recap;
 }
 
 
 const riassunto = teamFoul(squadre);
+// Ho un nuovo array di oggetti! Molto più manutenibile!
 console.log(riassunto);
 
 

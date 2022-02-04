@@ -27,15 +27,15 @@ const bici = [
 
 function lightestProduct(myArrayOfProducts){
 
-    let {peso} = myArrayOfProducts[0];
-
-    let {nome} = myArrayOfProducts[0];
+    let {peso, nome} = myArrayOfProducts[0];
 
     for(let i = 0; i < myArrayOfProducts.length; i++){
 
         if(peso > myArrayOfProducts[i].peso){
+
             peso = myArrayOfProducts[i].peso;
             nome = myArrayOfProducts[i].nome;
+
         }
 
     }
